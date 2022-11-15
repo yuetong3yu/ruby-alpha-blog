@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :articles, only: [:show, :index, :new, :create]
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
+  resources :categories, except: [:destroy]
 end
